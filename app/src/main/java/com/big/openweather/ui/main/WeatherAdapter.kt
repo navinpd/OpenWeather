@@ -10,15 +10,15 @@ import com.big.openweather.R
 import com.big.openweather.data.remote.response.weatherdetails.list
 
 class WeatherAdapter(
-    private var mMovieListItem: MutableList<list>,
+        private var mWeatherList: MutableList<list>,
 ) : RecyclerView.Adapter<WeatherAdapter.DataViewHolder>() {
 
     var onClickListener: View.OnClickListener? = null
 
-    override fun getItemCount() = mMovieListItem.size
+    override fun getItemCount() = mWeatherList.size
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
-        holder.bind(mMovieListItem[position])
+        holder.bind(mWeatherList[position])
     }
 
     inner class DataViewHolder(view: View) : RecyclerView.ViewHolder(view) {
