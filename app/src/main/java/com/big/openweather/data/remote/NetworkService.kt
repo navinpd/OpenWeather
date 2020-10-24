@@ -8,7 +8,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface NetworkService {
-    // https://api.openweathermap.org/data/2.5/forecast?q=London,uk&APPID=57e9d39f498035faf90d3e8c95adad24
+    // https://api.openweathermap.org/data/2.5/forecast?q=London&APPID=57e9d39f498035faf90d3e8c95adad24
     @GET(BuildConfig.BASE_URL + END_POINT)
     fun getLiveData(
             @Query(Endpoints.KEY_QUERY) queryText: String,

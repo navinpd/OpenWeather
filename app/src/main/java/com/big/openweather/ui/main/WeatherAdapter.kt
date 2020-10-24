@@ -22,10 +22,18 @@ class WeatherAdapter(
     }
 
     inner class DataViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val weatherDate: TextView = view.findViewById(R.id.date)
+        private val date: TextView = view.findViewById(R.id.date)
+        private val wind: TextView = view.findViewById(R.id.wind)
+        private val temperature: TextView = view.findViewById(R.id.temperature)
+        private val visibility: TextView = view.findViewById(R.id.visibility)
+        private val description: TextView = view.findViewById(R.id.status)
 
         fun bind(searchResult: list) {
-            weatherDate.text = searchResult.dt_txt
+            temperature.text = "Temp: ${searchResult.main.temp}"
+            date.text = searchResult.dt_txt
+            wind.text = "Wind: ${searchResult.wind.speed}"
+            description.text = "Description: ${searchResult.weather[0].description}"
+            visibility.text = "Visibility: ${searchResult.visibility}"
         }
     }
 
