@@ -15,29 +15,29 @@ object Networking {
 
 
     fun createNetworking(
-        apiVal: String,
-        baseUrl: String,
-        cascheDir: File,
-        cascheSize: Long
+            apiVal: String,
+            baseUrl: String,
+            cascheDir: File,
+            cascheSize: Long
     ): NetworkService {
         API_VAL = apiVal
         return Retrofit.Builder()
-            .baseUrl(baseUrl)
-            .client(
-                OkHttpClient.Builder()
-                    .cache(Cache(cascheDir, cascheSize))
-                    .addInterceptor(HttpLoggingInterceptor()
-                        .apply {
-                            level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY
-                            else HttpLoggingInterceptor.Level.NONE
-                        })
-                    .build()
-            )
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(
-                NetworkService::class.java
-            )
+                .baseUrl(baseUrl)
+                .client(
+                        OkHttpClient.Builder()
+                                .cache(Cache(cascheDir, cascheSize))
+                                .addInterceptor(HttpLoggingInterceptor()
+                                        .apply {
+                                            level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY
+                                            else HttpLoggingInterceptor.Level.NONE
+                                        })
+                                .build()
+                )
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(
+                        NetworkService::class.java
+                )
     }
 
 }
