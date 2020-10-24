@@ -13,7 +13,7 @@ You need latest Android Studio version to uild project.
 - Gson for Json to POJO
 - Appcompat libraries for MVVM architecture
 
-Below dependencies are used in this project:
+## Below dependencies are used:
 ```groovy
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
