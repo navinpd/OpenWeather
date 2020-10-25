@@ -12,6 +12,7 @@ You need latest Android Studio version to uild project.
 - Okhttp3 for logging and ssl pinning
 - Gson for Json to POJO
 - Appcompat libraries for MVVM architecture
+- PowerMockito Used for tests & mocking API calls under Repository class
 
 ## Below dependencies are used:
 ```groovy
@@ -39,6 +40,13 @@ You need latest Android Studio version to uild project.
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    
+    //Power Mockito
+    testImplementation 'junit:junit:4.12'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "org.powermock:powermock-api-mockito2:2.0.0-beta.5"
+    testImplementation "org.powermock:powermock-module-junit4-rule-agent:2.0.0-beta.5"
+    testImplementation "org.powermock:powermock-module-junit4:2.0.0-beta.5"
 
     implementation 'com.google.code.gson:gson:2.8.6'
 ```
