@@ -1,0 +1,1 @@
+package com.big.openweather.parameterized_listener;public interface TPCSDKListener<T> {    void onStart();    void onSuccess(TPCResult<T> ok);    void onError(String error); // Error as per Girmiti's choice}
